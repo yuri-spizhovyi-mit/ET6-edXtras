@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """ anatomy of a while loop: https://www.programiz.com/python-programming/while-loop#flowchart
   while _condition_:
     _loop_body_
