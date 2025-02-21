@@ -15,7 +15,7 @@ print('-- begin --')
 
 # Constants
 long_enough = 14
-padding = '.:'
+padding = '.:.'
 
 # Accumulator variable
 padded_string = 'hi'
