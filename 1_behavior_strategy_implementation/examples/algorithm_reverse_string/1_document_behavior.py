@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-def a(b: str) -> str:
+def reverse_string(b: str) -> str:
     """Reverses a string.
     
     Args: 
@@ -12,13 +12,13 @@ def a(b: str) -> str:
     Raises:
         AssertionError: if the argument is not a string
 
-    >>> a('')
+    >>> reverse_string('')
     ''
 
-    >>> a('123')
+    >>> reverse_string('123')
     '321'
 
-    >>> a('aabaa')
+    >>> reverse_string('aabaa')
     'aabaa'
     """
         
@@ -33,16 +33,16 @@ def a(b: str) -> str:
 
 # --- assertion tests ---
 
-assert a("") == "", "Test 0"
+assert reverse_string("") == "", "Test 0"
 
-assert a("Bori") == "iroB", "Test 1"
+assert reverse_string("Bori") == "iroB", "Test 1"
 
-assert a("<[+]>") == ">]+[<", "Test 2"
+assert reverse_string("<[+]>") == ">]+[<", "Test 2"
 
-assert a("racecar") == "racecar", "Test 3"
+assert reverse_string("racecar") == "racecar", "Test 3"
 
 try:
-    a(123)
+    reverse_string(123)
 except Exception as e:
     pass
 else: 

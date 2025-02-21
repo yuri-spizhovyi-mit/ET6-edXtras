@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # - decalare a function with one argument that takes and returns a string
-def a(b: str) -> str:
+def reverse_string(to_reverse: str) -> str:
     """Reverses a string.
     
     Args: 
@@ -13,46 +13,46 @@ def a(b: str) -> str:
     Raises:
         AssertionError: if the argument is not a string
 
-    >>> a('')
+    >>> reverse_string('')
     ''
 
-    >>> a('123')
+    >>> reverse_string('123')
     '321'
 
-    >>> a('aabaa')
+    >>> reverse_string('aabaa')
     'aabaa'
     """
         
     # make sure the developer passed in the correct type
     # - assert that that the argument is type string
-    assert isinstance(b, str), "argument is not a string"
+    assert isinstance(to_reverse, str), "argument is not a string"
     
     # accumulator variable, storing the reversed string
     #   https://textbooks.cs.ksu.edu/cc310/01-review/10-variable-roles/#accumulator
     # - declare variable c storing an empty string
-    c = ""
+    reversed_input = ""
 
     # one-by-one, append the next character to the front of the reversed string
     #  - iterate over each character in the argument
-    for d in b:
+    for next_character in to_reverse:
         # - concatenate the values in d and c, assign them to c
-        c = d + c
+        reversed_input = next_character + reversed_input
 
     # - return the value stored in c
-    return c
+    return reversed_input
 
 # --- assertion tests ---
 
-assert a("") == "", "Test 0"
+assert reverse_string("") == "", "Test 0"
 
-assert a("Bori") == "iroB", "Test 1"
+assert reverse_string("Bori") == "iroB", "Test 1"
 
-assert a("<[+]>") == ">]+[<", "Test 2"
+assert reverse_string("<[+]>") == ">]+[<", "Test 2"
 
-assert a("racecar") == "racecar", "Test 3"
+assert reverse_string("racecar") == "racecar", "Test 3"
 
 try:
-    a(123)
+    reverse_string(123)
 except Exception as e:
     pass
 else: 
