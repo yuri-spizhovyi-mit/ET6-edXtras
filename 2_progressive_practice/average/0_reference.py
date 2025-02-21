@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 # this program is obfuscated so you can't read it
 # but it still works correctly!  
 # you can run this file to understand how the exercises should behave
