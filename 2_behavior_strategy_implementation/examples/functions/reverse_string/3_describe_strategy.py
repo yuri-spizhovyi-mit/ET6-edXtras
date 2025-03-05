@@ -38,7 +38,7 @@ def reverse_string(to_reverse: str) -> str:
         # - concatenate the values in d and c, assign them to c
         reversed_input = next_character + reversed_input
 
-    # - return the value stored in c
+    # - return the value stored in reversed_input
     return reversed_input
 
 # --- assertion tests ---

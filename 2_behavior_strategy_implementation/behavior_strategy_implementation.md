@@ -2,6 +2,12 @@
 
 3 different ways to understand the same function.
 
+<br/>
+
+![Behavior, Strategy, Implementation Tree](./behavior_strategy_implementation.excalidraw.svg)
+
+<br/>
+
 ## Behavior
 
 What does the function do? What are it’s arguments and it’s return value? How
