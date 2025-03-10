@@ -134,7 +134,6 @@ Test cases:
 """
 
 # try-except block: handle potential keyboard interrupt
-# this replaces JS's null check since Python's input() doesn't return null
 try:
     # call input(): get string from user
     # declare, init: store user's input as string
@@ -194,7 +193,6 @@ try:
 except KeyboardInterrupt:
     # assign: sad face for interrupted input
     #   this handles the case where the user doesn't want to provide input
-    #   similar to handling null in the JS version
     reaction = ':('
 else:
     # check: convert input to lower case and compare to 'yes'
