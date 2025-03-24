@@ -31,4 +31,3 @@ removified = __
 
 # Display results
 print(f'\nBefore: {original}\nAfter: {removified}')
-

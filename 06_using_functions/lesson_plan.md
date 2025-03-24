@@ -282,7 +282,14 @@ class: middle
 
 ## Pure Functions - _a vocabulary word_
 
-_Pure functions_: don't modify arguments, always return, do not interact with the user.
+_Pure functions_:
+
+- only use data passed as arguments
+- don't modify arguments
+- always return
+- do not interact with the user.
+
+Pure functions are good because they are:
 
 - Easy to document
 
