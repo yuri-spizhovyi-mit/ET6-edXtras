@@ -33,7 +33,7 @@ import traceback
 # --- initial solution to refactor ---
 def reverse_iterable(iterable: str | list) -> str | list:
     assert isinstance(iterable, (str, list)), "Input must be a string or a list"
-    
+
     if isinstance(iterable, str):
         return iterable[::-1]
     else:
@@ -44,7 +44,9 @@ def reverse_iterable(iterable: str | list) -> str | list:
 
 
 # --- write your function names in this list ---
-for solution in [reverse_iterable]:
+for solution in [
+    reverse_iterable
+]:
     print("\n>>> ", solution.__name__, "... ", end="")
 
     try:

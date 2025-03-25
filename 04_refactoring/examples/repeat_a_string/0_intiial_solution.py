@@ -32,12 +32,12 @@ import traceback
 
 # --- initial solution to refactor ---
 #  can be from you, LeetCode, stackoverflow, a peer, an LLM, ...
-def repeat_a_string(to_repeat: str = '', repetitions: int = 0) -> str:
-    assert isinstance(to_repeat, str), 'first argument must be a string'
-    assert isinstance(repetitions, int), 'second argument must be an integer'
-    assert repetitions >= 0, 'second argument is less than 0'
+def repeat_a_string(to_repeat: str = "", repetitions: int = 0) -> str:
+    assert isinstance(to_repeat, str), "first argument must be a string"
+    assert isinstance(repetitions, int), "second argument must be an integer"
+    assert repetitions >= 0, "second argument is less than 0"
 
-    repeated = ''
+    repeated = ""
     for _ in range(repetitions):
         repeated += to_repeat
 

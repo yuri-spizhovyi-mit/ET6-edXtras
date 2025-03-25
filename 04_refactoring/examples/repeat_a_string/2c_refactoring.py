@@ -55,7 +55,7 @@ def repeat_a_string(to_repeat: str = "", repetitions: int = 0) -> str:
 # implementation refactor - try with more fun variable names
 
 
-def storylike_variable_names(repeat_me: str = "", this_many_times: int = 0) -> str:
+def repeat_a_string_storylike(repeat_me: str = "", this_many_times: int = 0) -> str:
     assert isinstance(repeat_me, str), "first argument must be a string"
     assert isinstance(this_many_times, int), "second argument must be an integer"
     assert this_many_times >= 0, "second argument is less than 0"
@@ -70,7 +70,20 @@ def storylike_variable_names(repeat_me: str = "", this_many_times: int = 0) -> s
 # strategy refactor, take advantage of python operators - multiply string by repetitions
 
 
-def multiply_string_by_repetitions(repeat_me: str = "", this_many_times: int = 0) -> str:
+def multiply_string_by_repetitions(to_repeat: str = "", repetitions: int = 0) -> str:
+    assert isinstance(to_repeat, str), "first argument must be a string"
+    assert isinstance(repetitions, int), "second argument must be an integer"
+    assert repetitions >= 0, "second argument is less than 0"
+
+    return to_repeat * repetitions
+
+
+# implementation refactor, use more storylike variable names
+
+
+def multiply_string_by_repetitions_storylike(
+    repeat_me: str = "", this_many_times: int = 0
+) -> str:
     assert isinstance(repeat_me, str), "first argument must be a string"
     assert isinstance(this_many_times, int), "second argument must be an integer"
     assert this_many_times >= 0, "second argument is less than 0"
@@ -84,8 +97,9 @@ def multiply_string_by_repetitions(repeat_me: str = "", this_many_times: int = 0
 # --- write your function names in this list ---
 for solution in [
     repeat_a_string,
-    storylike_variable_names,
+    repeat_a_string_storylike,
     multiply_string_by_repetitions,
+    multiply_string_by_repetitions_storylike,
 ]:
     print("\n>>> ", solution.__name__, "... ", end="")
 

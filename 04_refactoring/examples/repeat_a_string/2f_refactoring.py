@@ -54,7 +54,8 @@ def repeat_a_string(to_repeat: str = "", repetitions: int = 0) -> str:
 
 # implementation refactor - try with more fun variable names
 
-def storylike_variable_names(repeat_me: str = "", this_many_times: int = 0) -> str:
+
+def repeat_a_string_storylike(repeat_me: str = "", this_many_times: int = 0) -> str:
     assert isinstance(repeat_me, str), "first argument must be a string"
     assert isinstance(this_many_times, int), "second argument must be an integer"
     assert this_many_times >= 0, "second argument is less than 0"
@@ -68,7 +69,21 @@ def storylike_variable_names(repeat_me: str = "", this_many_times: int = 0) -> s
 
 # strategy refactor, take advantage of python operators - multiply string by repetitions
 
-def multiply_string_by_repetitions(repeat_me: str = "", this_many_times: int = 0) -> str:
+
+def multiply_string_by_repetitions(to_repeat: str = "", repetitions: int = 0) -> str:
+    assert isinstance(to_repeat, str), "first argument must be a string"
+    assert isinstance(repetitions, int), "second argument must be an integer"
+    assert repetitions >= 0, "second argument is less than 0"
+
+    return to_repeat * repetitions
+
+
+# implementation refactor, use more storylike variable names
+
+
+def multiply_string_by_repetitions_storylike(
+    repeat_me: str = "", this_many_times: int = 0
+) -> str:
     assert isinstance(repeat_me, str), "first argument must be a string"
     assert isinstance(this_many_times, int), "second argument must be an integer"
     assert this_many_times >= 0, "second argument is less than 0"
@@ -78,12 +93,13 @@ def multiply_string_by_repetitions(repeat_me: str = "", this_many_times: int = 0
 
 # strategy refactor - iterate with while loop until the string is long enough
 
+
 def iterate_until_length_is_correct(text: str = "", repeats: int = 0) -> str:
     assert isinstance(text, str), "first argument must be a string"
     assert isinstance(repeats, int), "second argument must be an integer"
     assert repeats >= 0, "second argument is less than 0"
 
-    accumulator = ''
+    accumulator = ""
     while len(accumulator) != (len(text) * repeats):
         accumulator += text
 
@@ -92,51 +108,40 @@ def iterate_until_length_is_correct(text: str = "", repeats: int = 0) -> str:
 
 # implementation refactor - use an extra variable to make the length more clear
 
-def iterate_until_length_is_correct__readabiilty_1(text: str = "", repeats: int = 0) -> str:
+
+def iterate_until_length_is_correct__readabiilty(
+    text: str = "", repeats: int = 0
+) -> str:
     assert isinstance(text, str), "first argument must be a string"
     assert isinstance(repeats, int), "second argument must be an integer"
     assert repeats >= 0, "second argument is less than 0"
 
     solution_length = len(text) * repeats
 
-    accumulator = ''
+    accumulator = ""
     while len(accumulator) != solution_length:
         accumulator += text
 
     return accumulator
 
+
 # implementation refactor - checking for < instead of != better communicates the strategy
 
-def iterate_until_length_is_correct__readabiilty_2(text: str = "", repeats: int = 0) -> str:
+
+def iterate_until_length_is_correct__readabiilty_2(
+    text: str = "", repeats: int = 0
+) -> str:
     assert isinstance(text, str), "first argument must be a string"
     assert isinstance(repeats, int), "second argument must be an integer"
     assert repeats >= 0, "second argument is less than 0"
 
     solution_length = len(text) * repeats
 
-    accumulator = ''
+    accumulator = ""
     while len(accumulator) < solution_length:
         accumulator += text
 
     return accumulator
-
-# strategy refactor - recursion, starting with the template. base case: 0 repeats
-
-def recursion_template_base_case_repeats(text: str = "", repeats: int = 0) -> str:
-    assert isinstance(text, str), "first argument must be a string"
-    assert isinstance(repeats, int), "second argument must be an integer"
-    assert repeats >= 0, "second argument is less than 0"
-
-    base_case = repeats == 0  # must use argument
-    if base_case:
-        turn_around = ''
-        return turn_around
-
-    break_down = repeats - 1  # must use argument
-    recursion = recursion_template_base_case_repeats(text, break_down)
-    build_up = recursion + text  # must use recursion
-
-    return build_up
 
 
 #  =====  test your solutions  =====
@@ -145,12 +150,12 @@ def recursion_template_base_case_repeats(text: str = "", repeats: int = 0) -> st
 # --- write your function names in this list ---
 for solution in [
     repeat_a_string,
-    storylike_variable_names,
+    repeat_a_string_storylike,
     multiply_string_by_repetitions,
+    multiply_string_by_repetitions_storylike,
     iterate_until_length_is_correct,
-    iterate_until_length_is_correct__readabiilty_1,
+    iterate_until_length_is_correct__readabiilty,
     iterate_until_length_is_correct__readabiilty_2,
-    recursion_template_base_case_repeats
 ]:
     print("\n>>> ", solution.__name__, "... ", end="")
 

@@ -55,7 +55,7 @@ def repeat_a_string(to_repeat: str = "", repetitions: int = 0) -> str:
 # implementation refactor - try with more fun variable names
 
 
-def storylike_variable_names(repeat_me: str = "", this_many_times: int = 0) -> str:
+def repeat_a_string_storylike(repeat_me: str = "", this_many_times: int = 0) -> str:
     assert isinstance(repeat_me, str), "first argument must be a string"
     assert isinstance(this_many_times, int), "second argument must be an integer"
     assert this_many_times >= 0, "second argument is less than 0"
@@ -70,7 +70,18 @@ def storylike_variable_names(repeat_me: str = "", this_many_times: int = 0) -> s
 # strategy refactor, take advantage of python operators - multiply string by repetitions
 
 
-def multiply_string_by_repetitions(
+def multiply_string_by_repetitions(to_repeat: str = "", repetitions: int = 0) -> str:
+    assert isinstance(to_repeat, str), "first argument must be a string"
+    assert isinstance(repetitions, int), "second argument must be an integer"
+    assert repetitions >= 0, "second argument is less than 0"
+
+    return to_repeat * repetitions
+
+
+# implementation refactor, use more storylike variable names
+
+
+def multiply_string_by_repetitions_storylike(
     repeat_me: str = "", this_many_times: int = 0
 ) -> str:
     assert isinstance(repeat_me, str), "first argument must be a string"
@@ -98,7 +109,7 @@ def iterate_until_length_is_correct(text: str = "", repeats: int = 0) -> str:
 # implementation refactor - use an extra variable to make the length more clear
 
 
-def iterate_until_length_is_correct__readabiilty_1(
+def iterate_until_length_is_correct__readabiilty(
     text: str = "", repeats: int = 0
 ) -> str:
     assert isinstance(text, str), "first argument must be a string"
@@ -136,7 +147,7 @@ def iterate_until_length_is_correct__readabiilty_2(
 # strategy refactor - recursion, starting with the template. base case: 0 repeats
 
 
-def recursion_template_base_case_repeats(text: str = "", repeats: int = 0) -> str:
+def recursion_base_case_repeats_template(text: str = "", repeats: int = 0) -> str:
     assert isinstance(text, str), "first argument must be a string"
     assert isinstance(repeats, int), "second argument must be an integer"
     assert repeats >= 0, "second argument is less than 0"
@@ -147,7 +158,7 @@ def recursion_template_base_case_repeats(text: str = "", repeats: int = 0) -> st
         return turn_around
 
     break_down = repeats - 1  # must use argument
-    recursion = recursion_template_base_case_repeats(text, break_down)
+    recursion = recursion_base_case_repeats_template(text, break_down)
     build_up = recursion + text  # must use recursion
 
     return build_up
@@ -167,7 +178,7 @@ def recursion_base_case_repeats(text: str = "", repeats: int = 0) -> str:
     return recursion_base_case_repeats(text, repeats - 1) + text
 
 
-# strategy refactor - make it a tailcall recursion
+# implementation refactor - make it a tailcall recursion
 
 
 def recursion_base_case_repeats_tailcall(text: str = "", repeats: int = 0) -> str:
@@ -181,66 +192,21 @@ def recursion_base_case_repeats_tailcall(text: str = "", repeats: int = 0) -> st
     return text + recursion_base_case_repeats_tailcall(text, repeats - 1)
 
 
-# strategy refactor - add memoization.
-# also a backwards-compatible behavior refactorL:
-#   it changes the function's signature without breaking previous test cases
-
-def recursion_base_case_repeats_memo(text: str = "", repeats: int = 0, cache: dict={}) -> str:
-    assert isinstance(text, str), "first argument must be a string"
-    assert isinstance(repeats, int), "second argument must be an integer"
-    assert repeats >= 0, "second argument is less than 0"
-
-    key = f"{repeats}{text}"
-    if key in cache:
-        return cache[key]
-
-    if repeats == 0:
-        return ""
-
-    result = text + recursion_base_case_repeats_memo(text, repeats - 1, cache)
-    cache[key] = result
-    return result
-
-
-# strategy & implementation refactor - make a storylike implementation with memoization
-
-def storylike_with_memo(
-    the_input: str = "", this_many_times: int = 0, the_past: dict = {}
-) -> str:
-    """Those who cannot remember the past are doomed to repeat it."""
-
-    assert isinstance(the_input, str), "first argument must be a string"
-    assert isinstance(this_many_times, int), "second argument must be an integer"
-    assert this_many_times >= 0, "second argument is less than 0"
-
-    task = f"I am to repeat '{the_input} {this_many_times}'."
-
-    if task in the_past:
-        return the_past[task]
-
-    the_current_task = the_input * this_many_times
-
-    the_past[task] = the_current_task
-
-    return the_current_task
-
-
 #  =====  test your solutions  =====
 
 
 # --- write your function names in this list ---
 for solution in [
     repeat_a_string,
-    storylike_variable_names,
+    repeat_a_string_storylike,
     multiply_string_by_repetitions,
+    multiply_string_by_repetitions_storylike,
     iterate_until_length_is_correct,
-    iterate_until_length_is_correct__readabiilty_1,
+    iterate_until_length_is_correct__readabiilty,
     iterate_until_length_is_correct__readabiilty_2,
-    recursion_template_base_case_repeats,
+    recursion_base_case_repeats_template,
     recursion_base_case_repeats,
     recursion_base_case_repeats_tailcall,
-    recursion_base_case_repeats_memo,
-    storylike_with_memo,
 ]:
     print("\n>>> ", solution.__name__, "... ", end="")
 

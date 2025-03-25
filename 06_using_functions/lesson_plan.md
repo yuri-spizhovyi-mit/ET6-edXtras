@@ -144,7 +144,7 @@ if what_to_count == 'v':
     count = count_vowels(text)
     message = f"your text has {count} vowels."
 
-elif what_to_count == 'c:
+elif what_to_count == 'c':
     count = count_consonants(text)
     message = f"your text has {count} consonants."
 

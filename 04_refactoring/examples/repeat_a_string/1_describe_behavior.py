@@ -40,12 +40,12 @@ import traceback
 
 # --- initial solution to refactor ---
 #  can be from you, LeetCode, stackoverflow, a peer, an LLM, ...
-def repeat_a_string(to_repeat: str = '', repetitions: int = 0) -> str:
-    assert isinstance(to_repeat, str), 'first argument must be a string'
-    assert isinstance(repetitions, int), 'second argument must be an integer'
-    assert repetitions >= 0, 'second argument is less than 0'
+def repeat_a_string(to_repeat: str = "", repetitions: int = 0) -> str:
+    assert isinstance(to_repeat, str), "first argument must be a string"
+    assert isinstance(repetitions, int), "second argument must be an integer"
+    assert repetitions >= 0, "second argument is less than 0"
 
-    repeated = ''
+    repeated = ""
     for _ in range(repetitions):
         repeated += to_repeat
 
@@ -62,18 +62,21 @@ for solution in [repeat_a_string]:
     try:
         # --- BEGIN assertion tests ---
 
-        assert solution() == ''
-        assert solution('') == ''
-        assert solution('', 0) == ''
-        assert solution('', 30) == ''
-        assert solution('a', 0) == ''
-        assert solution('a', 1) == 'a'
-        assert solution('a', 2) == 'aa'
-        assert solution('aa', 1) == 'aa'
-        assert solution('aba', 1) == 'aba'
-        assert solution('aba', 3) == 'abaabaaba'
-        assert solution('<{+}>', 7) == '<{+}><{+}><{+}><{+}><{+}><{+}><{+}>'
-        assert solution('"Go!", said Dr. Seuss?', 2) == '"Go!", said Dr. Seuss?"Go!", said Dr. Seuss?'
+        assert solution() == ""
+        assert solution("") == ""
+        assert solution("", 0) == ""
+        assert solution("", 30) == ""
+        assert solution("a", 0) == ""
+        assert solution("a", 1) == "a"
+        assert solution("a", 2) == "aa"
+        assert solution("aa", 1) == "aa"
+        assert solution("aba", 1) == "aba"
+        assert solution("aba", 3) == "abaabaaba"
+        assert solution("<{+}>", 7) == "<{+}><{+}><{+}><{+}><{+}><{+}><{+}>"
+        assert (
+            solution('"Go!", said Dr. Seuss?', 2)
+            == '"Go!", said Dr. Seuss?"Go!", said Dr. Seuss?'
+        )
 
         # --- END assertion tests ---
 

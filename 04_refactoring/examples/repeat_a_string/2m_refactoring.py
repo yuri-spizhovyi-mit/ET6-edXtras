@@ -164,6 +164,99 @@ def recursion_base_case_repeats_template(text: str = "", repeats: int = 0) -> st
     return build_up
 
 
+# implementation refactor - clear out the template
+
+
+def recursion_base_case_repeats(text: str = "", repeats: int = 0) -> str:
+    assert isinstance(text, str), "first argument must be a string"
+    assert isinstance(repeats, int), "second argument must be an integer"
+    assert repeats >= 0, "second argument is less than 0"
+
+    if repeats == 0:
+        return ""
+
+    return recursion_base_case_repeats(text, repeats - 1) + text
+
+
+# implementation refactor - make it a tailcall recursion
+
+
+def recursion_base_case_repeats_tailcall(text: str = "", repeats: int = 0) -> str:
+    assert isinstance(text, str), "first argument must be a string"
+    assert isinstance(repeats, int), "second argument must be an integer"
+    assert repeats >= 0, "second argument is less than 0"
+
+    if repeats == 0:
+        return ""
+
+    return text + recursion_base_case_repeats_tailcall(text, repeats - 1)
+
+
+# strategy refactor - add memoization.
+# also a backwards-compatible behavior refactorL:
+#   it changes the function's signature without breaking previous test cases
+
+
+def recursion_base_case_repeats_memo(
+    text: str = "", repeats: int = 0, cache: dict = {}
+) -> str:
+    assert isinstance(text, str), "first argument must be a string"
+    assert isinstance(repeats, int), "second argument must be an integer"
+    assert repeats >= 0, "second argument is less than 0"
+
+    key = f"{repeats}{text}"
+    if key in cache:
+        return cache[key]
+
+    if repeats == 0:
+        return ""
+
+    result = text + recursion_base_case_repeats_memo(text, repeats - 1, cache)
+    cache[key] = result
+    return result
+
+
+# strategy & implementation refactor - make a storylike implementation with memoization
+
+
+def storylike_with_memo(
+    the_input: str = "", this_many_times: int = 0, the_past: dict = {}
+) -> str:
+    """Those who cannot remember the past are doomed to repeat it."""
+
+    assert isinstance(the_input, str), "first argument must be a string"
+    assert isinstance(this_many_times, int), "second argument must be an integer"
+    assert this_many_times >= 0, "second argument is less than 0"
+
+    task = f"I am to repeat '{the_input} {this_many_times}'."
+
+    if task in the_past:
+        return the_past[task]
+
+    the_current_task = the_input * this_many_times
+
+    the_past[task] = the_current_task
+
+    return the_current_task
+
+
+# implementation refactor - that was fun, let's try it simpler and more professional
+
+
+def boring_with_memo(text: str = "", repetitions: int = 0, cache: dict = {}) -> str:
+    assert isinstance(text, str), "first argument must be a string"
+    assert isinstance(repetitions, int), "second argument must be an integer"
+    assert repetitions >= 0, "second argument is less than 0"
+
+    key = f"{text} * {repetitions}"
+    if key in cache:
+        return cache[key]
+
+    result = text * repetitions
+    cache[key] = result
+    return result
+
+
 #  =====  test your solutions  =====
 
 
@@ -177,6 +270,11 @@ for solution in [
     iterate_until_length_is_correct__readabiilty,
     iterate_until_length_is_correct__readabiilty_2,
     recursion_base_case_repeats_template,
+    recursion_base_case_repeats,
+    recursion_base_case_repeats_tailcall,
+    recursion_base_case_repeats_memo,
+    storylike_with_memo,
+    boring_with_memo,
 ]:
     print("\n>>> ", solution.__name__, "... ", end="")
 
