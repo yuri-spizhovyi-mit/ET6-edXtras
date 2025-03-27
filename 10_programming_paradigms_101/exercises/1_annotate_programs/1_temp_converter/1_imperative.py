@@ -9,7 +9,7 @@ converted_temps = []
 while True:
     user_input = input("Enter a temperature to convert (or 'done' to finish):\n>>> ")
 
-    if user_input.lower() == 'done':
+    if user_input.lower() == "done":
         break
 
     try:
@@ -19,7 +19,7 @@ while True:
         print(f"'{user_input}' is not a valid temperature, it has been ignored")
 
 for temp in temperatures:
-    converted_temp = (temp * 9/5) + 32
+    converted_temp = (temp * 9 / 5) + 32
     converted_temps.append(converted_temp)
 
 print("\nOriginal Temperatures (Celsius):", temperatures)

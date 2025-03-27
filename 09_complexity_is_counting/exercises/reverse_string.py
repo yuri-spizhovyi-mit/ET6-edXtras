@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+
 def reverse_string(to_reverse: str) -> str:
     """Reverses a string.
-    
-    Args: 
+
+    Args:
         str: the string to return
 
     Returns: The argument, reversed
@@ -21,9 +22,9 @@ def reverse_string(to_reverse: str) -> str:
     >>> reverse_string('aabaa')
     'aabaa'
     """
-        
+
     assert isinstance(to_reverse, str), "argument is not a string"
-    
+
     reversed_input = ""
 
     for next_character in to_reverse:

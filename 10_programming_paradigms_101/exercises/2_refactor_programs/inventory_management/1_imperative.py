@@ -17,32 +17,34 @@ while True:
 
     choice = input("Enter your choice (1-5): ")
 
-    if choice == '1':
-        print('\nInventory:')
+    if choice == "1":
+        print("\nInventory:")
         pprint.pprint(inventory)
 
-    elif choice == '2':
+    elif choice == "2":
         name = input("Enter item name: ")
         price = float(input("Enter item price: "))
         quantity = int(input("Enter quantity: "))
-        
-        inventory[name] = {'price': price, 'quantity': quantity}
+
+        inventory[name] = {"price": price, "quantity": quantity}
         print(f"{quantity} {name}(s) added to inventory")
 
-    elif choice == '3':
+    elif choice == "3":
         name = input("Enter item name to update: ")
         if name in inventory:
             quantity = int(input("Enter new quantity: "))
-            inventory[name]['quantity'] = quantity
+            inventory[name]["quantity"] = quantity
             print(f"{name} quantity updated to {quantity}")
         else:
             print("Item not found in inventory")
 
-    elif choice == '4':
-        total_value = sum(item['price'] * item['quantity'] for item in inventory.values())
+    elif choice == "4":
+        total_value = sum(
+            item["price"] * item["quantity"] for item in inventory.values()
+        )
         print(f"Total inventory value: ${total_value:.2f}")
 
-    elif choice == '5':
+    elif choice == "5":
         break
 
     else:

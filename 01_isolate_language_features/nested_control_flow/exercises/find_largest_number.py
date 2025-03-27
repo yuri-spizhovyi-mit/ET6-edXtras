@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Finding the Largest Number
+"""Finding the Largest Number
 
-  Use a loop to find the largest number in a list.
+Use a loop to find the largest number in a list.
 """
 
 numbers = []
@@ -25,4 +25,4 @@ for _ in _:
     if _ > largest:
         largest = _
 
-print(f'the largest number in your list is {largest}')
+print(f"the largest number in your list is {largest}")

@@ -3,9 +3,7 @@
 
 
 def fibonacci_memo(n: int, memo: dict = {}) -> int:
-    """
-    
-    """
+    """ """
     if n == 0:
         return 0
 
@@ -23,7 +21,7 @@ def fibonacci_memo(n: int, memo: dict = {}) -> int:
 
     build_up = left_recursion + right_recursion
     memo[n] = build_up
-    
+
     return memo[n]
 
 

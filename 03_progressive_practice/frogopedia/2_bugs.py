@@ -3,8 +3,8 @@
 
 """look out for:
 
-  - logical operators
-  - boolean flag values
+- logical operators
+- boolean flag values
 
 """
 

@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-validInput = ''
+validInput = ""
 
 index = 0
-while validInput == '':
+while validInput == "":
     index = _ + 1
 
-    userInput = input(
-        f'enter anything with "e" or "E" as the {index}th letter:\n>>> '
-    )
+    userInput = input(f'enter anything with "e" or "E" as the {index}th letter:\n>>> ')
 
-    if userInput is None or userInput == '':
-        print('that is nothing')
+    if userInput is None or userInput == "":
+        print("that is nothing")
     elif _(userInput) < _:
-        print('too short')
-    elif userInput[_] == 'e' or userInput[_] == 'E':
+        print("too short")
+    elif userInput[_] == "e" or userInput[_] == "E":
         _ = userInput
     else:
         print(_)

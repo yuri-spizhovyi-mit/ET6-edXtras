@@ -4,8 +4,8 @@
 # - decalare a function with one argument that takes and returns a string
 def reverse_string(to_reverse: str) -> str:
     """Reverses a string.
-    
-    Args: 
+
+    Args:
         str: the string to return
 
     Returns: The argument, reversed
@@ -22,11 +22,11 @@ def reverse_string(to_reverse: str) -> str:
     >>> reverse_string('aabaa')
     'aabaa'
     """
-        
+
     # make sure the developer passed in the correct type
     # - assert that that the argument is type string
     assert isinstance(to_reverse, str), "argument is not a string"
-    
+
     # accumulator variable, storing the reversed string
     #   https://textbooks.cs.ksu.edu/cc310/01-review/10-variable-roles/#accumulator
     # - declare variable c storing an empty string
@@ -40,6 +40,7 @@ def reverse_string(to_reverse: str) -> str:
 
     # - return the value stored in reversed_input
     return reversed_input
+
 
 # --- assertion tests ---
 
@@ -55,5 +56,5 @@ try:
     reverse_string(123)
 except Exception as e:
     pass
-else: 
-    assert 'did not raise'
+else:
+    assert "did not raise"

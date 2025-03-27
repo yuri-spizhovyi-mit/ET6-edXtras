@@ -5,11 +5,11 @@
 try:
     a = input('enter the word "yes", upper or lower case: ')
 except KeyboardInterrupt:
-    b = ':('
+    b = ":("
 else:
-    if a.lower() == 'yes':
-        b = a + '!'
+    if a.lower() == "yes":
+        b = a + "!"
     else:
-        b = 'baaaaad: ' + a
+        b = "baaaaad: " + a
 
 print(b)

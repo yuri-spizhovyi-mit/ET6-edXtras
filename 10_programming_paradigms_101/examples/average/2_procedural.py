@@ -16,7 +16,7 @@ def gather_numbers(prompt: str = 'enter a number or "done"') -> list[float]:
 
     while True:
         # argument data -> printed to CLI -> _
-        # CLI input -> _ -> local variable 
+        # CLI input -> _ -> local variable
         user_input = input(prompt)
 
         # local variable -> comparison -> _

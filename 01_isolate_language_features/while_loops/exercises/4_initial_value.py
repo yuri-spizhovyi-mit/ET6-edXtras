@@ -1,14 +1,13 @@
-""" Initial Value
+"""Initial Value
 
-  write the initial value for sum to pass the assertion
+write the initial value for sum to pass the assertion
 
-  sum is used as an accumulating variable
-    with each iteration it grows
-    accumulating the data until it reaches a correct value
+sum is used as an accumulating variable
+  with each iteration it grows
+  accumulating the data until it reaches a correct value
 """
 
-
-print('-- begin --')
+print("-- begin --")
 
 # fill in the initial value to pass the assertion
 # there are more than 1 correct answer!
@@ -19,11 +18,11 @@ sum = _
 while sum < 100:
     if sum % 2 == 0:
         sum += sum
-        print('if path:', sum)
+        print("if path:", sum)
     else:
         sum += 1
-        print('else path:', sum)
+        print("else path:", sum)
 
-assert sum == 128, 'the sum should be 128'
+assert sum == 128, "the sum should be 128"
 
-print('-- end --')
+print("-- end --")

@@ -13,6 +13,7 @@ def a(b: str) -> str:
         c = d + c
     return c
 
+
 assert a("") == "", "Test 0"
 assert a("xyz") == "zyx", "Test 1"
 assert a("Malayalam") == "malayalaM", "Test 2"

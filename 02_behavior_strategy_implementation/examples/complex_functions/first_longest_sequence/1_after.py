@@ -1,11 +1,11 @@
 # completed in an ET6 study session led by @KarimMakki
 
 """
-    1. Behavior: unit tests, documentation, function name, type hints
-    2. Implementation: comment what each line of code does (predictive stepping!)
-    3. Strategy pt. 1 - purpose: comment why each line of code exists
-    4. Strategy pt. 2 - connections: describe how different lines interact
-    5. strategy pt. 3 - goals: summarize the strategy using sub-goals
+1. Behavior: unit tests, documentation, function name, type hints
+2. Implementation: comment what each line of code does (predictive stepping!)
+3. Strategy pt. 1 - purpose: comment why each line of code exists
+4. Strategy pt. 2 - connections: describe how different lines interact
+5. strategy pt. 3 - goals: summarize the strategy using sub-goals
 """
 
 

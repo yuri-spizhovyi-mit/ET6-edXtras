@@ -1,5 +1,6 @@
 # completed in an ET6 study session led by @KarimMakki
 
+
 def first_longest_sequence(b: list[int] = []) -> list[int]:
     """
     function that returns the first occurrence of the longest same sequence
@@ -69,4 +70,3 @@ def first_longest_sequence(b: list[int] = []) -> list[int]:
 
 
 # --- counting steps ---
-

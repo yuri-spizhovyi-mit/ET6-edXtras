@@ -13,7 +13,7 @@ Raises:
 
 Examples:
 
->>> 
+>>>
 
 >>>
 
@@ -44,9 +44,7 @@ def reverse_iterable(iterable: str | list) -> str | list:
 
 
 # --- write your function names in this list ---
-for solution in [
-    reverse_iterable
-]:
+for solution in [reverse_iterable]:
     print("\n>>> ", solution.__name__, "... ", end="")
 
     try:

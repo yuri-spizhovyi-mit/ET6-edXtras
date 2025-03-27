@@ -6,6 +6,7 @@
 
 # --- declare function ---
 
+
 def fibonacci_numbers_space_optimized(n):
     a = 0
     b = 1
@@ -22,5 +23,6 @@ def fibonacci_numbers_space_optimized(n):
             a = b
             b = c
         return b
-    
+
+
 # --- test function ---

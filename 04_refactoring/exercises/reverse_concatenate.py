@@ -13,7 +13,7 @@ Raises:
 
 Examples:
 
->>> 
+>>>
 
 >>>
 
@@ -33,9 +33,9 @@ import traceback
 # --- initial solution to refactor ---
 def reverse_concatenate(array_of_strings: list[str]) -> str:
     assert isinstance(array_of_strings, list), "argument is not a list"
-    assert all(
-        isinstance(item, str) for item in array_of_strings
-    ), "argument contains non-strings"
+    assert all(isinstance(item, str) for item in array_of_strings), (
+        "argument contains non-strings"
+    )
 
     reversed_array = array_of_strings[::-1]
     return "".join(reversed_array)

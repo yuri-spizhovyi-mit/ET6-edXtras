@@ -1,4 +1,4 @@
-""" Repeat Character
+"""Repeat Character
 
 Write a function that repeats each character in a string n times.
 

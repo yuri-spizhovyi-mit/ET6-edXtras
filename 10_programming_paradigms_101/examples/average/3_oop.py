@@ -3,7 +3,8 @@
 
 # ===== define class =====
 
-class Averager():
+
+class Averager:
     # data is hard coded -> _ -> data is saved to instance properties
     def __init__(self):
         # hard coded data -> _ -> instance property
@@ -27,7 +28,7 @@ class Averager():
                 break
 
             try:
-                # local variable -> cast to float -> new local variable 
+                # local variable -> cast to float -> new local variable
                 next_number = float(user_input)
                 # local variable -> _ -> instance property's list
                 self.user_numbers.append(next_number)
@@ -43,19 +44,19 @@ class Averager():
             self.average = sum(self.user_numbers) / len(self.user_numbers)
 
     # data is from args & hard coding -> proceseed by methods-> printed to the CLI
-    def main(self, name: str=''):
+    def main(self, name: str = ""):
         # argument data -> used in conditional -> _
         if name:
             # argument data -> printed to CLI -> _
             print("\n", name, "\n\n")
 
         print(
-        "\ncalculate the average of many numbers:\n\n"
-        "- you must input something\n"
-        "- input a number and it will be added to the sum\n"
-        '- input "done" and the program will finish (case insensitive)\n'
-        "- input anything else and it will be ignored\n\n"
-        "when you have finished inputting numbers, the average will be displayed\n\n"
+            "\ncalculate the average of many numbers:\n\n"
+            "- you must input something\n"
+            "- input a number and it will be added to the sum\n"
+            '- input "done" and the program will finish (case insensitive)\n'
+            "- input anything else and it will be ignored\n\n"
+            "when you have finished inputting numbers, the average will be displayed\n\n"
         )
 
         # calling method that update instance state
@@ -76,9 +77,9 @@ average_program_1 = Averager()
 average_program_2 = Averager()
 
 # if you input the same numbers both times, will you get the same average?
-average_program_1.main('---- program 1, first run ----')
-average_program_2.main('---- program 2, first run ----')
+average_program_1.main("---- program 1, first run ----")
+average_program_2.main("---- program 2, first run ----")
 
 # if you input the same numbers as before, will you get the same averages?
-average_program_1.main('---- program 1, second run ----')
-average_program_2.main('---- program 2, second run ----')
+average_program_1.main("---- program 1, second run ----")
+average_program_2.main("---- program 2, second run ----")

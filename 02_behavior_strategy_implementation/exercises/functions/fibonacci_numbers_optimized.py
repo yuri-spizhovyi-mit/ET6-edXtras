@@ -11,6 +11,7 @@ f = [0] * MAX
 
 # --- declare function ---
 
+
 def fibonacci_numbers_optimized(n):
     if n == 0:
         return 0
@@ -27,10 +28,11 @@ def fibonacci_numbers_optimized(n):
         k = n // 2
 
     if n & 1:
-        f[n] = (fib(k) * fib(k) + fib(k-1) * fib(k-1))
+        f[n] = fib(k) * fib(k) + fib(k - 1) * fib(k - 1)
     else:
-        f[n] = (2*fib(k-1) + fib(k))*fib(k)
+        f[n] = (2 * fib(k - 1) + fib(k)) * fib(k)
 
     return f[n]
+
 
 # --- test function ---

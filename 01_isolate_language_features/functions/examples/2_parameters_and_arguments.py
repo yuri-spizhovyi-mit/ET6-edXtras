@@ -7,11 +7,12 @@
 def log_the_parameter(parameter):
     print(type(parameter).__name__, parameter)
 
+
 # ARGUMENTS assign values to parameters when functions are CALLED
 # you can pass arguments directly as values
-log_the_parameter('4')
+log_the_parameter("4")
 log_the_parameter(4.0)
-log_the_parameter('4.0')
+log_the_parameter("4.0")
 
 # or indirectly using variables
 arg1 = True

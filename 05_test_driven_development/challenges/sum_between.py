@@ -1,4 +1,4 @@
-""" Sum Between
+"""Sum Between
 
 Sum all the numbers in a range.
 

@@ -21,9 +21,7 @@ e = []
 f = None
 while f != "":
     print("\nSaved e: ", e)
-    f = input(
-        "Enter some text to add to the list, or enter nothing to finish: "
-    )
+    f = input("Enter some text to add to the list, or enter nothing to finish: ")
     if f != "":
         e.append(f)
 

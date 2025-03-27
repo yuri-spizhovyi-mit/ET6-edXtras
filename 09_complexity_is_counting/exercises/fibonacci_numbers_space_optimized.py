@@ -20,5 +20,6 @@ def fibonacci_numbers_space_optimized(n):
             a = b
             b = c
         return b
-    
+
+
 # --- counting steps ---

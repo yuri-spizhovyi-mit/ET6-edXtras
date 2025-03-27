@@ -35,7 +35,7 @@ except KeyboardInterrupt:
     # assign: sad face for interrupted input
     #   this handles the case where the user doesn't want to provide input
     #   similar to handling null in the JS version
-    reaction = ':('
+    reaction = ":("
 
 # --- process input and create reaction ---
 
@@ -43,16 +43,16 @@ else:
     # check: convert input to lower case and compare to 'yes'
     #   checking the user input to validate their response
     #   using .lower() makes the check case-insensitive
-    if user_input.lower() == 'yes':
+    if user_input.lower() == "yes":
         # assign: the input concatenated with exclamation mark
         #   this is the success path for valid user inputs
         #   we keep their original casing in the response
-        reaction = user_input + '!'
+        reaction = user_input + "!"
     else:
         # assign: baaaad concatenated with the input
         #   this is the path for invalid user inputs (anything but "yes")
         #   shows users what they typed wrong
-        reaction = 'baaaaad: ' + user_input
+        reaction = "baaaaad: " + user_input
 
 # --- display result to user ---
 

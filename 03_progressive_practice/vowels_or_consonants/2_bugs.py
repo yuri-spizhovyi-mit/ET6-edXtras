@@ -3,11 +3,11 @@
 
 """look out for:
 
-    - loop check logic
-    - variable declarations
-    - assignment vs. comparison
-    - wrong interaction functions
-    - off-by-one in for loop
+- loop check logic
+- variable declarations
+- assignment vs. comparison
+- wrong interaction functions
+- off-by-one in for loop
 
 """
 

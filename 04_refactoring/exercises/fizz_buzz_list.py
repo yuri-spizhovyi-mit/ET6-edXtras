@@ -13,7 +13,7 @@ Raises:
 
 Examples:
 
->>> 
+>>>
 
 >>>
 
@@ -34,7 +34,7 @@ import traceback
 def fizz_buzz_list(max_num: int = 0) -> list:
     assert isinstance(max_num, int), "argument is not an integer"
     assert max_num >= 0, "argument is less than 0"
-    
+
     result = []
     for i in range(max_num):
         if i % 3 == 0 and i % 5 == 0:

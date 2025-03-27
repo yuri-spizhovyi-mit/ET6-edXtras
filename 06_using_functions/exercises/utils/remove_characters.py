@@ -13,7 +13,9 @@ Adapted from https://github.com/DeNepo/inside-js/tree/main/07-using-functions/
 from typing import Optional
 
 
-def remove_characters(text: Optional[str] = None, to_remove: Optional[str] = None) -> str:
+def remove_characters(
+    text: Optional[str] = None, to_remove: Optional[str] = None
+) -> str:
     """Remove all specified characters from the input text.
 
     Args:
@@ -40,10 +42,10 @@ def remove_characters(text: Optional[str] = None, to_remove: Optional[str] = Non
     """
     # Handle default parameters
     if text is None:
-        text = ''
+        text = ""
     if to_remove is None:
-        to_remove = ''
-    
+        to_remove = ""
+
     # Add defensive assertions
     if not isinstance(text, str):
         raise TypeError("text must be a string")
@@ -53,6 +55,6 @@ def remove_characters(text: Optional[str] = None, to_remove: Optional[str] = Non
     # Remove each character sequentially
     result = text
     for char in to_remove:
-        result = result.replace(char, '')
-    
+        result = result.replace(char, "")
+
     return result

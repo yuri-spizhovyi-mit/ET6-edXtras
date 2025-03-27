@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" anatomy of a while loop: https://www.programiz.com/python-programming/while-loop#flowchart
-  while _condition_:
-    _loop_body_
+"""anatomy of a while loop: https://www.programiz.com/python-programming/while-loop#flowchart
+while _condition_:
+  _loop_body_
 
 """
 
 # step 1
-print('-- begin --')
+print("-- begin --")
 
 # 2: Declare and assign a
 a = 0
@@ -19,7 +19,7 @@ while a < 4:
     a = a + 1
 
 # 12: Assert a (Python uses 'assert' slightly differently)
-assert a == 4, 'a should be 4'
+assert a == 4, "a should be 4"
 
 # 13
-print('-- end --')
+print("-- end --")

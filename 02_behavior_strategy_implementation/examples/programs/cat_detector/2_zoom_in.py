@@ -21,7 +21,6 @@ Test cases:
   'good bye' -> 'baaaaad: good bye'
 """
 
-
 # try-except block: handle potential keyboard interrupt
 try:
     # call input(): get string from user
@@ -29,15 +28,15 @@ try:
     a = input('enter the word "yes", upper or lower case: ')
 except KeyboardInterrupt:
     # assign: sad face for interrupted input
-    b = ':('
+    b = ":("
 else:
     # check: convert input to lower case and compare to 'yes'
-    if a.lower() == 'yes':
+    if a.lower() == "yes":
         # assign: the input concatenated with exclamation mark
-        b = a + '!'
+        b = a + "!"
     else:
         # assign: baaaad concatenated with the input
-        b = 'baaaaad: ' + a
+        b = "baaaaad: " + a
 
 # call print: show the final b
 print(b)

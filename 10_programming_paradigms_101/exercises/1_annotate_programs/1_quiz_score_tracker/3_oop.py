@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 
+
 class QuizScoreTracker:
     def __init__(self):
         self.scores = []
-        self.grade_counts = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'F': 0}
+        self.grade_counts = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
         self.total_average = 0
 
-    def gather_scores(self, prompt: str = 'Enter a score'):
+    def gather_scores(self, prompt: str = "Enter a score"):
         while True:
             user_input = input(prompt)
-            
-            if user_input.lower() == 'done':
+
+            if user_input.lower() == "done":
                 break
-            
+
             try:
                 score = float(user_input)
                 if 0 <= score <= 100:
@@ -25,15 +26,15 @@ class QuizScoreTracker:
     def calculate_grade_distribution(self):
         for score in self.scores:
             if score >= 90:
-                self.grade_counts['A'] += 1
+                self.grade_counts["A"] += 1
             elif score >= 80:
-                self.grade_counts['B'] += 1
+                self.grade_counts["B"] += 1
             elif score >= 70:
-                self.grade_counts['C'] += 1
+                self.grade_counts["C"] += 1
             elif score >= 60:
-                self.grade_counts['D'] += 1
+                self.grade_counts["D"] += 1
             else:
-                self.grade_counts['F'] += 1
+                self.grade_counts["F"] += 1
 
     def calculate_average(self):
         self.total_average = sum(self.scores) / len(self.scores) if self.scores else 0
@@ -48,6 +49,7 @@ class QuizScoreTracker:
         print("\nScores:", self.scores)
         print("Average Score:", self.total_average)
         print("Grade Distribution:", self.grade_counts)
+
 
 tracker_1 = QuizScoreTracker()
 tracker_1.main()

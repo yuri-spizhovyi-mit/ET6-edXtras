@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-""" Uppercaseify
-  you can use for loops to do some logic for each element in a string
+"""Uppercaseify
+you can use for loops to do some logic for each element in a string
 
-  this loop should create a new string with each character upper-cased
+this loop should create a new string with each character upper-cased
 """
 
 lower_case_string = "abcde"

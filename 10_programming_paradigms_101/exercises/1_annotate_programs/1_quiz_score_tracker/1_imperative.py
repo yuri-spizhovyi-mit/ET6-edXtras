@@ -3,29 +3,29 @@
 print("\nQuiz Score Tracker\n")
 
 scores = []
-grade_counts = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'F': 0}
+grade_counts = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
 
 while True:
     user_input = input("Enter a quiz score (0-100) or 'done' to finish:\n>>> ")
 
-    if user_input.lower() == 'done':
+    if user_input.lower() == "done":
         break
 
     try:
         score = float(user_input)
         if 0 <= score <= 100:
             scores.append(score)
-            
+
             if score >= 90:
-                grade_counts['A'] += 1
+                grade_counts["A"] += 1
             elif score >= 80:
-                grade_counts['B'] += 1
+                grade_counts["B"] += 1
             elif score >= 70:
-                grade_counts['C'] += 1
+                grade_counts["C"] += 1
             elif score >= 60:
-                grade_counts['D'] += 1
+                grade_counts["D"] += 1
             else:
-                grade_counts['F'] += 1
+                grade_counts["F"] += 1
         else:
             print("Score must be between 0 and 100")
     except ValueError:

@@ -13,7 +13,7 @@ Raises:
 
 Examples:
 
->>> 
+>>>
 
 >>>
 
@@ -34,7 +34,7 @@ import traceback
 def fizz_buzz_dict(max_num: int) -> dict[int, str | int]:
     assert isinstance(max_num, int), "max is not an integer"
     assert max_num >= 0, "max is less than 0"
-    
+
     result = {}
     for i in range(max_num):
         if i % 3 == 0 and i % 5 == 0:

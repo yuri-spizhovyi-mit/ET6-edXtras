@@ -7,14 +7,14 @@
 
 #  =====  describe your function's behavior with a docstring  =====
 
-""" Filters a list, keeping only elements at even-indexed positions.
+"""Filters a list, keeping only elements at even-indexed positions.
 
 Arguments:
     items - a list of any type of elements, defaults to empty list
 
 Returns: list - containing only the elements from even-indexed positions (0, 2, 4, etc.)
 
-Raises: 
+Raises:
     AssertionError - if the argument is not a list
 
 Examples:

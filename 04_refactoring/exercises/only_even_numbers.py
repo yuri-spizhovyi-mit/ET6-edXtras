@@ -13,7 +13,7 @@ Raises:
 
 Examples:
 
->>> 
+>>>
 
 >>>
 
@@ -33,9 +33,9 @@ import traceback
 # --- initial solution to refactor ---
 def only_even_numbers(array_of_numbers: list[int | float]) -> list[int | float]:
     assert isinstance(array_of_numbers, list), "argument is not a list"
-    assert all(
-        isinstance(item, (int, float)) for item in array_of_numbers
-    ), "argument does not contain only numbers"
+    assert all(isinstance(item, (int, float)) for item in array_of_numbers), (
+        "argument does not contain only numbers"
+    )
 
     return [num for num in array_of_numbers if num % 2 == 0]
 

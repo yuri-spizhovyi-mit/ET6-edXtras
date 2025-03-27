@@ -17,6 +17,7 @@ def bubble_sort(numbers: list[int | float]) -> list[int | float]:
         # how does the recursive call relate to "constant" lines?
         return bubble_sort(numbers)
 
+
 # --- counting steps ---
 
 # !! it DOES matter where unsorted numbers are RELATIVE to each other
@@ -44,4 +45,4 @@ def bubble_sort(numbers: list[int | float]) -> list[int | float]:
 # --- unsorted lists with 2 unsorted numbers equidistant
 # bubble_sort([3, 2, 1, 4, 5]) # 45
 # bubble_sort([1, 4, 3, 2, 5]) # 45
-bubble_sort([1, 2, 5, 4, 3]) # 45
+bubble_sort([1, 2, 5, 4, 3])  # 45

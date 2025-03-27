@@ -13,7 +13,7 @@ Raises:
 
 Examples:
 
->>> 
+>>>
 
 >>>
 
@@ -34,9 +34,9 @@ import math
 # --- initial solution to refactor ---
 def sum_numbery(list_of_number_strings: list[str]) -> float:
     assert isinstance(list_of_number_strings, list), "argument is not a list"
-    assert all(
-        isinstance(item, str) for item in list_of_number_strings
-    ), "argument contains non-strings"
+    assert all(isinstance(item, str) for item in list_of_number_strings), (
+        "argument contains non-strings"
+    )
 
     numbers = []
     for s in list_of_number_strings:

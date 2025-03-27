@@ -3,8 +3,8 @@
 
 """for character of String
 
-    iterating through each character in a string is so common
-    hat there's special syntax to make it easier
+iterating through each character in a string is so common
+hat there's special syntax to make it easier
 
 """
 

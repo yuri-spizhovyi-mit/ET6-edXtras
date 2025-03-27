@@ -3,7 +3,7 @@
 
 #  =====  describe your function's behavior with a docstring  =====
 
-""" Repeats a string a specific number of times.
+"""Repeats a string a specific number of times.
 
 Arguments:
     string - the text to repeat, defaults to an empty string
@@ -11,7 +11,7 @@ Arguments:
 
 Returns: string - containing the argument repeated n times.
 
-Raises: 
+Raises:
     AssertionError - the first argument is not a string
     AssertionError - the second argument is not an integer
     AssertionError - the second argument is less than 0

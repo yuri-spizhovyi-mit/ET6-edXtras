@@ -14,9 +14,9 @@ actual = randint(0, 99)
 
 number = fibonacci_list(actual).pop()
 
-guess = int(input(f'What is the index of {number} in the Fibonacci sequence?  \n:  '))
+guess = int(input(f"What is the index of {number} in the Fibonacci sequence?  \n:  "))
 
 if guess == actual:
-    print(f'Correct! \n{number} has index {guess}.')
+    print(f"Correct! \n{number} has index {guess}.")
 else:
-    print(f'Nope :( \n{number} has index {actual}, not {guess}.')
+    print(f"Nope :( \n{number} has index {actual}, not {guess}.")

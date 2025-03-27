@@ -25,43 +25,43 @@ def get_yes_no(prompt: str) -> bool:
     """
     while True:
         response = input(prompt).strip().lower()
-        if response in ('y', 'yes'):
+        if response in ("y", "yes"):
             return True
-        if response in ('n', 'no'):
+        if response in ("n", "no"):
             return False
         print("Please enter 'y' for yes or 'n' for no.")
 
 
 def main() -> None:
     """Run the main program loop.
-    
+
     Prompts user for text and whether to remove vowels or consonants,
     then displays the modified result using a ternary expression.
     """
-    print('Enter some text, then decide if you want to remove the vowels or consonants')
-    
+    print("Enter some text, then decide if you want to remove the vowels or consonants")
+
     # Get text to modify
-    original = input('Enter the text to modify: ').strip()
+    original = input("Enter the text to modify: ").strip()
     while not original:
-        original = input('Please enter some text to modify: ').strip()
-    
+        original = input("Please enter some text to modify: ").strip()
+
     # Determine what to remove
     remove_vowels = get_yes_no(
-        '\nWhat would you like to remove?\n'
-        '- Enter y/yes to remove vowels\n'
-        '- Enter n/no to remove consonants\n'
+        "\nWhat would you like to remove?\n"
+        "- Enter y/yes to remove vowels\n"
+        "- Enter n/no to remove consonants\n"
     )
-    
+
     # Define character sets
-    vowels = 'aeiouAEIOU'
-    consonants = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
-    
+    vowels = "aeiouAEIOU"
+    consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+
     # Use remove_characters to create a new value for removified
     removified = __ if __ else __
-    
+
     # Display results
-    print(f'\nBefore: {original}\nAfter: {removified}')
+    print(f"\nBefore: {original}\nAfter: {removified}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

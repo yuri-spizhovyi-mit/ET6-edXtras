@@ -10,7 +10,9 @@ while True:
         if confirm == "yes":
             break
 
-case_sensitive = input("Do you want a case-sensitive search? (yes/no): ").strip().lower() == "yes"
+case_sensitive = (
+    input("Do you want a case-sensitive search? (yes/no): ").strip().lower() == "yes"
+)
 
 while True:
     query = input("Enter a search query: ")

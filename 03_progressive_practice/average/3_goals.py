@@ -22,7 +22,7 @@ while True:
         continue
 
     # -- BEGIN: update sum and input_count if input is a number, exit if it is "done" --
-    
+
     # -- END --
 
 average = sum / input_count

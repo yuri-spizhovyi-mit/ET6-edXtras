@@ -8,8 +8,8 @@ A program that reverses a user's entire input.
 
 from utils.reverse_string import reverse_string
 
-user_phrase = input('Enter a phrase, I will reverse it. \n:  ')
+user_phrase = input("Enter a phrase, I will reverse it. \n:  ")
 
 backwards_phrase = reverse_string(user_phrase)
 
-print(f'-> {backwards_phrase}')
+print(f"-> {backwards_phrase}")

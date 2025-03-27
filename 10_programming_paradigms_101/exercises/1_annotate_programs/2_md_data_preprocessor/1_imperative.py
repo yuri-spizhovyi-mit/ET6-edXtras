@@ -10,10 +10,10 @@ normalized_data = []
 feature_stats = {}
 
 # Load raw data
-with open('dataset.csv', 'r') as file:
+with open("dataset.csv", "r") as file:
     csv_reader = csv.reader(file)
     headers = next(csv_reader)
-    
+
     for row in csv_reader:
         # Convert to numeric, handle non-numeric
         numeric_row = []
@@ -22,30 +22,29 @@ with open('dataset.csv', 'r') as file:
                 numeric_row.append(float(value))
             except ValueError:
                 numeric_row.append(0)  # Default replacement
-        
+
         raw_data.append(numeric_row)
 
 # Calculate feature statistics
 for col_index in range(len(headers)):
     column = [row[col_index] for row in raw_data]
-    
+
     mean = sum(column) / len(column)
     variance = sum((x - mean) ** 2 for x in column) / len(column)
     std_dev = math.sqrt(variance)
-    
-    feature_stats[headers[col_index]] = {
-        'mean': mean,
-        'std_dev': std_dev
-    }
+
+    feature_stats[headers[col_index]] = {"mean": mean, "std_dev": std_dev}
 
 # Z-score normalization
 for row in raw_data:
     normalized_row = []
     for col_index, value in enumerate(row):
         feature = headers[col_index]
-        normalized_value = (value - feature_stats[feature]['mean']) / feature_stats[feature]['std_dev']
+        normalized_value = (value - feature_stats[feature]["mean"]) / feature_stats[
+            feature
+        ]["std_dev"]
         normalized_row.append(normalized_value)
-    
+
     normalized_data.append(normalized_row)
 
 # Output results

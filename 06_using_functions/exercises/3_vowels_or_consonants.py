@@ -15,9 +15,11 @@ from typing import Optional
 import re
 
 
-def get_validated_input(prompt: str, 
-                       error_msg: str = "Please enter something", 
-                       validator: Optional[callable] = None) -> str:
+def get_validated_input(
+    prompt: str,
+    error_msg: str = "Please enter something",
+    validator: Optional[callable] = None,
+) -> str:
     """Get and validate user input.
 
     Args:
@@ -41,40 +43,44 @@ def get_validated_input(prompt: str,
 
 def main() -> None:
     """Run the main program loop.
-    
+
     Prompts user for text and filtering preferences, then demonstrates
     character filtering with code marked for refactoring.
     """
     # Get and validate user input
     while True:
         user_input = get_validated_input(
-            'Enter a word to filter: ',
+            "Enter a word to filter: ",
             "Words can't have white space",
-            lambda x: not re.search(r'\s', x)
+            lambda x: not re.search(r"\s", x),
         )
-        
+
         confirm_message = f'Do you want to filter this word?\n\n- "{user_input}"'
-        if input(confirm_message + ' (y/n): ').lower().startswith('y'):
+        if input(confirm_message + " (y/n): ").lower().startswith("y"):
             break
-    
+
     # Determine what to remove
-    remove_vowels = input(
-        f'What would you like to remove from "{user_input}"?\n'
-        '- Enter y for vowels, n for consonants: '
-    ).lower().startswith('y')
-    
-    to_remove = 'aeiou' if remove_vowels else 'bcdfghjklmnpqrstvwxyz'
-    
+    remove_vowels = (
+        input(
+            f'What would you like to remove from "{user_input}"?\n'
+            "- Enter y for vowels, n for consonants: "
+        )
+        .lower()
+        .startswith("y")
+    )
+
+    to_remove = "aeiou" if remove_vowels else "bcdfghjklmnpqrstvwxyz"
+
     # BEGIN: refactor this to call `filter`
-    filtered_input = ''
+    filtered_input = ""
     for character in user_input:
         lower_case_character = character.lower()
         if not to_remove.__contains__(lower_case_character):
             filtered_input += character
     # END: refactor
-    
+
     print(f'"{user_input}" -> "{filtered_input}"')
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

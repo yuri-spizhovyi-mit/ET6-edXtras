@@ -3,7 +3,7 @@
 
 #  =====  describe your function's behavior with a docstring  =====
 
-""" reverses an iterable (string or list)
+"""reverses an iterable (string or list)
 
 Arguments:    str | list -> the thing to reverse
 
@@ -13,7 +13,7 @@ Raises:  AssertionError -> when the argument is not an iterable
 
 Examples:
 
->>> 
+>>>
 
 >>>
 
@@ -76,7 +76,7 @@ def recursion_string_to_list(iterable: str | list) -> str | list:
 
     str_to_list_of_chars = list(iterable)
     reversed_chars = recursion_string_to_list(str_to_list_of_chars)
-    return ''.join(reversed_chars)
+    return "".join(reversed_chars)
 
 
 #  =====  test your solutions  =====

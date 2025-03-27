@@ -3,13 +3,13 @@
 
 #  =====  describe your function's behavior with a docstring  =====
 
-""" Generates a list with the integers from 0 -> n, in order.
+"""Generates a list with the integers from 0 -> n, in order.
 
 Arguments: n, integer - the highest number in the list. defaults to 0.
 
 Returns: list - all the integers from 0 -> n in order.
 
-Raises: 
+Raises:
     AssertionError if the argument is not an integer
     AssertionError if the argument is less than 0
 
@@ -141,6 +141,7 @@ def recursion_append(n: int = 0) -> list:
 
 
 # strategy refactor - use list comprehension
+
 
 def list_comprehension(max: int = 0) -> list:
     assert isinstance(max, int), "input must be an integer"

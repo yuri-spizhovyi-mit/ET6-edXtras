@@ -5,6 +5,7 @@
 
 # --- declare function ---
 
+
 def fibonacci_numbers(n):
     assert n >= 0
 
@@ -13,6 +14,7 @@ def fibonacci_numbers(n):
     elif n == 1:
         return 1
     else:
-        return fibonacci_numbers(n-1) + fibonacci_numbers(n-2)
+        return fibonacci_numbers(n - 1) + fibonacci_numbers(n - 2)
+
 
 # --- test function ---
