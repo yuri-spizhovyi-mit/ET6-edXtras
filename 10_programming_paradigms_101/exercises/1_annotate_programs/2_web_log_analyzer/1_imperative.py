@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 print("\nSimple Web Log Analyzer\n")
-
+server_log = "C:/Users/yspizhoviy/ET6-edXtras/10_programming_paradigms_101/exercises/1_annotate_programs/2_web_log_analyzer/server.log"
 log_entries = []
 error_count = 0
 traffic_by_endpoint = {}
 response_time_totals = {}
 
-with open("server.log", "r") as log_file:
+with open(server_log, "r") as log_file:
     for line in log_file:
         parts = line.strip().split("|")
         if len(parts) == 4:
