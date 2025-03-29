@@ -26,16 +26,17 @@ def update_quantity(inventory):
 
 
 def calculate_total_value(inventory):
-    total_value = sum(
+    return sum(
         item["price"] * item["quantity"] for item in inventory.values()
     )
-    print(f"Total inventory value: ${total_value:.2f}")
 
 
 def print_final_inventory(inventory):
+    print("\nFinal Inventory:")
     for name, details in inventory.items():
         print(f"{name}: ${details['price']} x {details['quantity']}")
-    print(f"Total value: ${calculate_total_value(inventory):.2f}")
+    total_value = calculate_total_value(inventory)
+    print(f"Total value: ${total_value:.2f}")
 
 
 def main():
@@ -60,9 +61,11 @@ def main():
             update_quantity(inventory)
 
         elif choice == "4":
-            calculate_total_value(inventory)
+            total_value = calculate_total_value(inventory)
+            print(f"Total inventory value: ${total_value:.2f}")
 
         elif choice == "5":
+            print_final_inventory(inventory)
             break
 
         else:
